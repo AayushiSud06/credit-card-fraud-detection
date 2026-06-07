@@ -47,6 +47,11 @@ The project uses the Credit Card Fraud Detection Dataset containing anonymized t
 
 The dataset is highly imbalanced, making fraud detection a challenging classification problem.
 
+The dataset used in this project is publicly available on Kaggle:
+
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+Download the dataset and place `creditcard.csv` inside the `data/` folder.
 ---
 
 ## 🔍 Project Workflow
