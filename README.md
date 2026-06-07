@@ -174,6 +174,11 @@ streamlit run app.py
 ```
 
 ---
+## 🌐 Live Demo
+
+Try AI FraudShield here:
+
+[https://your-app-url.streamlit.app](https://credit-card-fraud-detection-54z2phkymxbvoszzph9cal.streamlit.app/)
 
 ## 🎯 Future Improvements
 
