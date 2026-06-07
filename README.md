@@ -137,7 +137,7 @@ Key insights:
 Clone the repository:
 
 ```bash
-git clone https://github.com/AayushiSud06/credit-card-fraud-detection/
+git clone https://github.com/AayushiSud06/credit-card-fraud-detection
 ```
 
 Install dependencies:
