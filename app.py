@@ -19,7 +19,6 @@ if uploaded_file is not None:
     if "Class" in df.columns:
         df = df.drop("Class", axis=1)
 
-    # Save clean features for prediction
     X = df.copy()
 
     predictions = model.predict(X)
@@ -34,24 +33,7 @@ if uploaded_file is not None:
     probabilities[:,1] * 100
     ).round(2)
 
-    fraud_df = df[df["Prediction"] == "Fraud"]
-    st.subheader("🚨 Suspicious Transactions")
-
-    st.dataframe(fraud_df)
-
-    frauds = (df["Prediction"] == "Fraud").sum()
-
-    st.metric(
-        "Fraud Transactions Detected",
-        frauds
-    )
-
-    fraud_percent = (frauds / len(df)) * 100
-
-    st.metric(
-        "Fraud Percentage",
-        f"{fraud_percent:.2f}%"
-    )
+#risk levels of various frauds
 
     def risk_level(p):
 
@@ -68,6 +50,39 @@ if uploaded_file is not None:
     df["Fraud Probability"]
     .apply(risk_level)
     )
+#result of all frauds detected
+
+    fraud_df = df[df["Prediction"] == "Fraud"]
+    st.subheader("🚨 Suspicious Transactions")
+    fraud_df = fraud_df.sort_values(
+    by="Fraud Probability",
+    ascending=False
+    )
+    st.dataframe(fraud_df)
+
+#fraud counts
+
+    frauds = (df["Prediction"] == "Fraud").sum()
+
+#fraud percentage
+
+    fraud_percent = (frauds / len(df)) * 100
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+     st.metric(
+        "Fraud Transactions",
+        frauds
+    )
+
+    with col2:
+     st.metric(
+        "Fraud %",
+        f"{fraud_percent:.2f}%"
+    )
+     
+#downloadable file
 
     csv = df.to_csv(index=False)
 
