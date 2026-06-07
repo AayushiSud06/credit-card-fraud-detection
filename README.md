@@ -9,10 +9,14 @@ Credit card fraud causes significant financial losses every year. Detecting frau
 AI FraudShield is an end-to-end machine learning solution that analyzes transaction data, predicts fraudulent activity, assigns risk levels, and provides visual explanations through an interactive dashboard.
 
 ---
+## Dashboard Preview
+
+![Dashboard](assets/dashboard.png)
+
 ## Key Highlights
 
 - Built an end-to-end Machine Learning pipeline
-- Implemented Explainable AI using SHAP
+- Implemented SHAP-based Explainable AI for model transparency
 - Developed an interactive Streamlit dashboard
 - Generated fraud probability scores and risk levels
 - Enabled CSV-based transaction analysis and reporting
@@ -67,8 +71,7 @@ Used as a baseline model for comparison.
 
 ### Random Forest Classifier
 
-Selected as the final model due to superior fraud detection performance and feature importance capabilities.
-
+Selected as the final model due to its strong fraud detection performance, high precision, and ability to provide feature importance insights.
 ---
 
 ## 📈 Model Performance
@@ -131,6 +134,19 @@ Key insights:
 * Matplotlib
 
 ---
+## 📁 Project Structure
+
+```plaintext
+credit-card-fraud-detection/
+│
+├── assets/
+├── data/
+├── notebook/
+├── app.py
+├── fraud_model.pkl
+├── requirements.txt
+└── README.md
+```
 
 ## ▶️ Installation
 
