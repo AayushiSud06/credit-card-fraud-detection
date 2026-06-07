@@ -168,6 +168,6 @@ streamlit run app.py
 
 Aayushi Sud
 
-B.Tech Computer Engineering | AI/ML Enthusiast
+B.Tech Computer Engineering: TIET'28 | AI/ML Enthusiast
 
 Built as a portfolio project to demonstrate machine learning, explainable AI, and deployment skills.
